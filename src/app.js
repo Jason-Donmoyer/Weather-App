@@ -93,6 +93,7 @@ app.get('*', (req, res) => {
     });
 });
 
+// Set up seerver to listen
 app.listen(3000, () => {
     console.log('Server is locked, loaded and ready to ROCKKKK!');
 });
