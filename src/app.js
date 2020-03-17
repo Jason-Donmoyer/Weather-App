@@ -14,6 +14,8 @@ const geocode = require('./utils/geocode');
 // Create app variable by calling the express function
 const app = express();
 
+// Heroku PORT value
+const port = process.env.PORT || 3000;
 
 // Define paths for Express config
 const publicDir = path.join(__dirname, '../public');
@@ -94,8 +96,8 @@ app.get('*', (req, res) => {
 });
 
 // Set up seerver to listen
-app.listen(3000, () => {
-    console.log('Server is locked, loaded and ready to ROCKKKK!');
+app.listen(port, () => {
+    console.log('Server is locked, loaded and ready to ROCKKKK! Listening  on ' + port);
 });
 
 
